@@ -15,6 +15,9 @@ app.use(bodyParser.json({ limit: "30mb", extented: true }));
 app.use(cors());
 
 app.use("/posts", postRoutes);
+app.get("/", (req, res) => {
+  res.send("Hello to Memories API");
+});
 
 // const CONNECTION_URL =
 //   "mongodb+srv://zuhairmemories:captainamerica55443@cluster0.quhos.mongodb.net/?retryWrites=true&w=majority";
